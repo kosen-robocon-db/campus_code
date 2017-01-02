@@ -9,7 +9,7 @@ module CampusCode
     BASE_URL = "https://maps.googleapis.com/maps/api/place/textsearch/json"
 
     def initialize
-      @API_KEY = ENV["GOOGLE_PLACE_API_KEY"]
+      @API_KEY = ENV["GOOGLE_PLACES_API_KEY"]
     end
 
     def get_coordinates(query)
