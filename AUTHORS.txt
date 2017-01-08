@@ -1,0 +1,4 @@
+Authors ordered by first contribution to THIS SOFTWARE.
+
+Matthew238 / Ken-ichi AKIMOTO <matthew.szulik@gmail.com>
+m_cre / Shinya FUJITA <>

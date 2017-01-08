@@ -1,4 +1,7 @@
 # campus_code
+This software is released under the MIT License,
+see LICENSE.txt and AUTHORS.txt
+
 学校・キャンパスコードを生成するための Gem コマンドです。
 Gem としてインストールすれば OS のコマンドように使えます。
 
