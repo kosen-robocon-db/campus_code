@@ -81,7 +81,7 @@ module CampusCode
         end
         puts("Campus.create(region: region, code: #{row[5]}, " << \
               "name: \"#{row[1]}\", abbreviation: \"#{row[2]}\", " << \
-              "latitude: #{row[3]}, longtitude: #{row[4]})")
+              "latitude: #{row[3]}, longitude: #{row[4]})")
       end
     end
 
