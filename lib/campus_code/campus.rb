@@ -18,6 +18,14 @@ module CampusCode
       output
     end
 
+    def seed_codes
+      read
+      get_coordinates
+      sort
+      encode
+      output_seed_lines
+    end
+
     private
 
     def read
@@ -58,6 +66,22 @@ module CampusCode
         row.each_with_index do |col, i|
           i != 5 ? print(col,",") : puts(col)
         end
+      end
+    end
+
+    def output_seed_lines
+      region = {  1 => "北海道", 2 => "東北", 3 => "関東甲信越", 4 => "東海北陸", \
+                  5 => "近畿", 6 => "中国", 7 => "四国", 8 => "九州沖縄", \
+                  9 => "他" }
+      region_flag = 0
+      @campus_table.each do |row|
+        if row[0] != region_flag then
+          region_flag = row[0]
+          puts("region = Region.create(name: \"#{region[row[0]]}\")")
+        end
+        puts("Campus.create(region: region, code: #{row[5]}, \
+              name: \"#{row[1]}\", abbreviation: \"#{row[2]}\", \
+              latitude: #{row[3]}, longtitude: #{row[4]})")
       end
     end
 
